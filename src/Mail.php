@@ -10,12 +10,10 @@ use PHPMailer\PHPMailer\PHPMailer;
  * Date: 2018/12/11
  * Time: 下午12:31
  */
-class Mail
+class Mail extends Base
 {
-    private $config = null;
-    public $error_info = null;
 
-    public function __construct($config = [])
+    public function __construct(array $config)
     {
         $_config = [
             'host' => 'xxx',
