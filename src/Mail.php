@@ -23,6 +23,7 @@ class Mail extends Base
             'smtp_debug' => 0,
             'smtp_auth' => true,
             'smtp_secure' => 'ssl',
+            'charset' => 'utf-8',
             'smtp_options' => [
                 'ssl' => [
                     'verify_peer' => false,
@@ -80,6 +81,7 @@ class Mail extends Base
     private function mailInit()
     {
         $mail = new PHPMailer();
+        $mail->CharSet = $this->config['charset'];
         $mail->isSMTP();
         $mail->SMTPDebug = $this->config['smtp_debug'];
         $mail->Host = $this->config['host'];

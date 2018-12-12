@@ -13,13 +13,13 @@ $config = [
     'host' => 'ssl://smtp.exmail.qq.com',
     'port' => 465,
     'username' => 'xxx@xxx.com',
-    'password' => 'xxxxxx'
+    'password' => 'xxx',
 ];
 $mail = new Mail($config);
 $options = [
-    'to' => ['xxx@xxx.com'],
+    'to' => ['xxx@xxx.com','xxx@xxx.com'],
     'subject' => 'test',
-    'body' => 'just a test mail',
+    'body' => '这是一封测试邮件',
     'attachment' => [
         '/Users/xxx/Downloads/xxx.jpg'
     ]
