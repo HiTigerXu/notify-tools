@@ -14,6 +14,7 @@ $config = [
     'port' => 465,
     'username' => 'xxx@xxx.com',
     'password' => 'xxx',
+    'charset' => 'utf-8'
 ];
 $mail = new Mail($config);
 $options = [
